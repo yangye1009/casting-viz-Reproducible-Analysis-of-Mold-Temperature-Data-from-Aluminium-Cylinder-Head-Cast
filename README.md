@@ -1,0 +1,2 @@
+# casting-viz-Reproducible-Analysis-of-Mold-Temperature-Data-from-Aluminium-Cylinder-Head-Cast
+This repository is a **2026 refactoring** of the code from my 2020 B.Eng. thesis, *Design of Casting Data Visualization Based on Python* (School of Materials Science and Engineering, Jiangsu University; supervisor: Assoc. Prof. Zhao Guoping). The thesis used Python to analyse 902 process records from a foundry producing aluminium cylinder heads. 
