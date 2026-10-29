@@ -21,7 +21,7 @@ Requirements: Python ≥ 3.10, pandas ≥ 2.0 (verified on pandas 3.0), matplotl
 
 ```
 casting-viz/
-├── README.md / README_EN.md      documentation (Chinese / English)
+├── README.md 
 ├── requirements.txt
 ├── run_pipeline.py               command-line entry point
 ├── casting_viz/                  analysis package
@@ -55,7 +55,7 @@ casting-viz/
 | 9–10 | plot and drop furnace / shift code / running number | `plots.auxiliary_codes` |
 | 11–12 | mold temperatures by operator and by mold | `plots.temps_by_group` |
 | 13 | shift detection from the largest time gaps | `shifts.assign_shifts`, `shift_summary` |
-| 14 | three sensors per shift, all data | `plots.sensor_pairs` (redesigned, see 4.5) |
+| 14 | three sensors per shift, all data | `plots.sensor_pairs`  |
 | 15 | fluctuation statistics | `mold.temp_fluctuation` |
 | 16 | mold 8, three sensors per shift | `mold.mold_cycles`, `plots.temps_by_shift` |
 | 17–18 | hand-typed shift ranges + `describe()` | `mold.per_shift_stats` |
@@ -71,7 +71,7 @@ casting-viz/
 | ![](output/figures/04_correlation.png) | **Correlation.** Furnace id and shift code have η < 0.1 and can be ignored. Operator id (η = 0.69–0.75) and mold id (η = 0.47–0.62) explain much of the variation in T1 and T2. The running number has only a weak positive correlation with mold temperature (ρ ≈ 0.10–0.14). Note that operator and mold are nested (mold 16 is shared by operators 2 and 3), so these data cannot separate an operator effect from a mold effect. |
 | ![](output/figures/07_sensor_agreement.png) | **Sensor agreement.** Mold 8 points lie close to the diagonal with stable offsets (T2−T1 = 10.2 ± 7.3 °C, T1−T3 = 10.8 ± 4.3 °C). On mold 16, T2 drifts far above T1 (up to 481 °C). T3 also shows sporadic 380–640 °C spikes in the same period it begins to overflow, which may signal an emerging sensor fault. |
 | ![](output/figures/08_mold8_by_shift.png) | **Mold 8 stability.** Mean T1 across the five shifts is 243.8–247.1 °C, and the median cycle time is 420–480 s. The first casting of each shift is noticeably hotter, consistent with the mold being held warm during the pause. |
-| ![](output/figures/09_mold8_cycle_vs_temp_shift5.png) | **Cycle time vs. temperature.** The association is positive but weak. Only shift 5 is significant (T1: ρ = 0.29, p = 0.012, n = 77); pooling all shifts gives ρ = 0.11–0.14 (n = 327, p = 0.01–0.05). With 18 tests in total, the shift-5 result would not survive a Bonferroni correction (0.05/18 ≈ 0.003). The thesis claim "longer cycles mean hotter molds" should therefore be softened to "a weak positive association". |
+| ![](output/figures/09_mold8_cycle_vs_temp_shift5.png) | **Cycle time vs. temperature.** The association is positive but weak. Only shift 5 is significant (T1: ρ = 0.29, p = 0.012, n = 77); pooling all shifts gives ρ = 0.11–0.14 (n = 327, p = 0.01–0.05). With 18 tests in total, the shift-5 result would not survive a Bonferroni correction (0.05/18 ≈ 0.003).  |
 
 Full numerical results are in `output/tables/`.
 
